@@ -31,6 +31,7 @@ const WelcomeScreen = () => {
                 activeDot={
                     <View className="w-[32px] h-[4px] mx-1 bg-[#0286FF] rounded-full" />
                 }
+                onIndexChanged={(index) => setActiveIndex(index)}
             >
                 {
                     onboarding.map((item) => (
@@ -47,10 +48,10 @@ const WelcomeScreen = () => {
                                 <Text className="text-black text-3xl font-bold mx-10 text-center">
                                     {item.title}
                                 </Text>
-                                <Text className="text-[#858585] text-md mx-10 mt-3 text-center">
-                                    {item.description}
-                                </Text>
                             </View>
+                            <Text className="text-[#858585] text-md mx-10 mt-3 text-center">
+                                {item.description}
+                            </Text>
                         </View>
                     ))
                 }
@@ -58,3 +59,5 @@ const WelcomeScreen = () => {
         </SafeAreaView>
     );
 }
+
+export default WelcomeScreen;
