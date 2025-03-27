@@ -9,11 +9,13 @@ import message from "@assets/images/message.png";
 import person from "@assets/icons/person.png"
 import email from "@assets/icons/email.png"
 import lock from "@assets/icons/lock.png"
+import home from "@assets/icons/home.png"
 
 export const icons = {
     person,
     email,
-    lock
+    lock,
+    home
 }
 
 export const images = {

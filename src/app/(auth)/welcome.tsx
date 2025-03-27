@@ -5,6 +5,7 @@ import Swiper from "react-native-swiper";
 
 import { onboarding } from "@/constants";
 import { Image, Text, TouchableOpacity, View } from "react-native";
+import CustomButton from "@/components/CustomButton";
 
 const WelcomeScreen = () => {
     const swiperRef = useRef<Swiper>(null);
@@ -56,6 +57,15 @@ const WelcomeScreen = () => {
                     ))
                 }
             </Swiper>
+
+            <CustomButton
+                title={ isLastSlide ? "Iniciar" : "Próximo" }
+                onPress={() =>
+                    isLastSlide
+                        ? router.replace("/(auth)/sign-up")
+                        : swiperRef.current?.scrollBy(1)
+                }
+            />
         </SafeAreaView>
     );
 }
